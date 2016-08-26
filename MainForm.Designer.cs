@@ -121,8 +121,10 @@
             this.inputCheck5.Name = "inputCheck5";
             this.inputCheck5.Size = new System.Drawing.Size(26, 15);
             this.inputCheck5.TabIndex = 4;
+            this.inputCheck5.Tag = "5";
             this.inputCheck5.Text = "5";
             this.inputCheck5.UseVisualStyleBackColor = true;
+            this.inputCheck5.CheckStateChanged += new System.EventHandler(this.inputCheck_CheckedChanged);
             // 
             // inputCheck4
             // 
@@ -130,8 +132,10 @@
             this.inputCheck4.Name = "inputCheck4";
             this.inputCheck4.Size = new System.Drawing.Size(26, 15);
             this.inputCheck4.TabIndex = 3;
+            this.inputCheck4.Tag = "4";
             this.inputCheck4.Text = "4";
             this.inputCheck4.UseVisualStyleBackColor = true;
+            this.inputCheck4.CheckStateChanged += new System.EventHandler(this.inputCheck_CheckedChanged);
             // 
             // inputCheck3
             // 
@@ -139,8 +143,10 @@
             this.inputCheck3.Name = "inputCheck3";
             this.inputCheck3.Size = new System.Drawing.Size(26, 15);
             this.inputCheck3.TabIndex = 2;
+            this.inputCheck3.Tag = "3";
             this.inputCheck3.Text = "3";
             this.inputCheck3.UseVisualStyleBackColor = true;
+            this.inputCheck3.CheckStateChanged += new System.EventHandler(this.inputCheck_CheckedChanged);
             // 
             // inputCheck2
             // 
@@ -148,8 +154,10 @@
             this.inputCheck2.Name = "inputCheck2";
             this.inputCheck2.Size = new System.Drawing.Size(26, 15);
             this.inputCheck2.TabIndex = 1;
+            this.inputCheck2.Tag = "2";
             this.inputCheck2.Text = "2";
             this.inputCheck2.UseVisualStyleBackColor = true;
+            this.inputCheck2.CheckStateChanged += new System.EventHandler(this.inputCheck_CheckedChanged);
             // 
             // inputCheck1
             // 
@@ -157,8 +165,10 @@
             this.inputCheck1.Name = "inputCheck1";
             this.inputCheck1.Size = new System.Drawing.Size(26, 15);
             this.inputCheck1.TabIndex = 0;
+            this.inputCheck1.Tag = "1";
             this.inputCheck1.Text = "1";
             this.inputCheck1.UseVisualStyleBackColor = true;
+            this.inputCheck1.CheckStateChanged += new System.EventHandler(this.inputCheck_CheckedChanged);
             // 
             // GroupBox2
             // 
