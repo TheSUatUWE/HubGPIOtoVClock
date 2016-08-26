@@ -21,6 +21,8 @@ namespace HubGPIOtoVClock
         {
             InitializeComponent();
             ConnectToGPIO();
+            notifyIcon.Visible = true;
+            this.Hide();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -209,6 +211,37 @@ namespace HubGPIOtoVClock
             // Send salvo update
             logTextBox.AppendText("Checkbox value has changed: " + input.Tag.ToString() + " " + result.ToString() + "\r\n");
             this.sendSalvo(value, result);
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if(FormWindowState.Minimized == this.WindowState)
+            {
+                notifyIcon.Visible = true;
+                this.Hide();
+            }
+            else if(FormWindowState.Normal == this.WindowState)
+            {
+                notifyIcon.Visible = false;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseDevice();
+            this.Close();
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            this.Show();
+            this.BringToFront();
+        }
+
+        private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.BringToFront();
         }
     }
 }
